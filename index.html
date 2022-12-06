@@ -9,14 +9,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
+<style>
+  p {text-align: center;
+    font:bold;
+    font-style: italic;
+    color:white;
+  }
+  .bground {
+    background-color: rgb(124, 95, 161);
+  }
+</style>
+<body class="bground">
 
-  <div class="container">
+  <div class="container bground">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron text-center"
+      style="background-image: url('https://iiif.elifesciences.org/digests/43487%2Fdigest-43487.png/full/full/0/default.jpg'); background-position: 30% 50%; color: white;">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
+    </div>
+    <div>
+      <p>What bacteria are found in the belly button? A question we are looking to unravel.
+        Subject's belly buttons were tested to find out and here are their results. Using the 
+        filter on the left hand side, the test results for each participant will be loaded
+        to the three charts below. The test subjects demographic information is also provided along 
+        with their belly button type and wash frequency.
+      </p>
     </div>
     <div class="row">
       <div class="col-md-2">
@@ -34,22 +53,32 @@
       </div>
       <div class="col-md-5">
         <div id="bar"></div>
+        <p> This bar chart highlights the test subjects top 10 bacteria cultures found within
+          their belly button. Examining closer, there could be a correlation between 
+          scrubs per week and the amount of bacteria found in ones belly button.
+        </p>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
+        <p> The Belly Button Washing Frequency gauge represents the how often a test subject 
+          scrubs their belly button every week</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
+        <p>This scatter bubble chart plots each test subjects bacteria information. The size 
+          of the bubble provides a visual representation of the presence of that bacteria. The larger
+          the size, the more larger amount of that particular bacteria is present.
+        </p>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="plots.js"></script>
-  <script src="charts.js"></script>
+  <script src="static/js/plots.js"></script>
+  <script src="static/js/charts.js"></script>
 
 </body>
 
